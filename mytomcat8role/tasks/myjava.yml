@@ -1,0 +1,9 @@
+---
+- name: Update 
+  apt:
+    update_cache: yes
+
+- name: install java8 on ubuntu node only
+  apt:
+    name: default-jdk  
+    state: present

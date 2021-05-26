@@ -1,0 +1,16 @@
+---
+- name: Configure Tomcat
+  template:
+    src: templates/tomuser.j2
+    dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name: Configure tomcat context file
+  template:
+    src: templates/tomcontext.j2
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
+
+- name: Configure tomcat host-manager context file
+  template:
+    src: templates/tomhostcontext.j2
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
+    
